@@ -1,0 +1,31 @@
+{
+  "name": "piat-ufrn",
+  "version": "0.0.1",
+  "description": "Portal de incrições de atividades físicas da UFRN",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe-sbm/piaf-ufrn.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "html5",
+    "css3"
+  ],
+  "author": "Felipe SBM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipe-sbm/piaf-ufrn/issues"
+  },
+  "homepage": "https://github.com/felipe-sbm/piaf-ufrn#readme",
+  "dependencies": {
+    "electron": "^29.2.0",
+    "express": "^4.19.2",
+    "lucide-react": "^0.366.0",
+    "node": "^18.20.1"
+  }
+}
