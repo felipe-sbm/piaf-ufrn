@@ -11,8 +11,10 @@
     "url": "git+https://github.com/felipe-sbm/piaf-ufrn.git"
   },
   "keywords": [
+    "electron",
     "nodejs",
-    "expressjs",
+    "javascript",
+    "express",
     "html5",
     "css3"
   ],
