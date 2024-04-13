@@ -1,3 +1,14 @@
+  /* Para o editor: 🌀
+    Caro Quira Don, o fiz um issue no GitHub com o formato que iremos editar.
+  As cores foram baseadas nas High Schools, paleta de cores bem selecionada. O site conterá:
+  -Responsividade para dispositivos móveis;
+  -Modo claro e escuro;
+  -Versão distinta de tablet;                                         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  -Fluidez para versões antigas;                                      | Obs: publicar na branch "teste"! |
+  -Compatibilidade com banco de dados;                                ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+  -Acessibilidade: Auidio-visual, letras grandes, alto contraste etc.
+  Acho que só isso, qualquer coisa ou surgestão faça um issue no GitHub. Obrigado!*/
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -6,8 +17,8 @@ body {
   padding: 0px;
 }
 .container {
-  width: 40rem;
-  height: 60rem;
+  width: 60rem;
+  height: 120rem;
   background-color: #e7e2b8;
   /* background-color: #e0e0cd; */
   position: relative;
@@ -15,14 +26,14 @@ body {
   position: absolute;
   top: 0rem;
   bottom: 0rem;
-  left: 31%;
+  left: 22%;
 }
 .links li {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 1rem;
-    float: center;
+  padding: 1rem;
+  float: center;
+  list-style-type: none;
+  display: inline;
+  text-align: center;
 }
 .links a {
   color: black;
@@ -42,5 +53,6 @@ body {
   color: #bd0000;
 }
 .img {
-  width: 40rem;
+  left: 10%;
+  width: 45rem;
 }

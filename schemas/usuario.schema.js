@@ -1,9 +1,15 @@
 module.exports = {
   type: "object",
   properties: {
+    cpf: { type: "number", minimum: 11, maximum: 11 },
+    data: { type: "string", format: "date" },
     email: { type: "string", format: "email" },
-    senha: { type: "string" },
+    responsaveis: {
+      type: "array",
+      items: { type: "string", minimum: 1, maximum: 5 },
+    },
+    vinculo: { type: "" },
   },
-  required: ["email", "senha"],
+  required: ["data", "cpf", "email", "responsaveis", "vinculo"],
   additionalProperties: false,
 };
