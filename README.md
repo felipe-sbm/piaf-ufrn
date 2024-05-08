@@ -1,6 +1,3 @@
-### Bem-vindo à branch de testes!
-Aqui você irá ver os testes feitos e cada etapa para implementação do resultado final. Fique atento aos detalhes e aos erros, para evitar no seu projeto e também aproveitar os detalhes positivos. Viva o Open Source!
-
 # PIAF - UFRN
 Portal de integração de atividades físicas da UFRN 🏀
 ![PIAF](https://github.com/felipe-sbm/piaf-ufrn/assets/129466661/5aa37c27-d409-44d7-90fe-b22306d950bb)
