@@ -31,3 +31,7 @@ next-env.d.ts
 .contentlayer
 
 # Whoah! Zero was here!
+logs
+.post.http
+.usuario.http
+dev.sqlite

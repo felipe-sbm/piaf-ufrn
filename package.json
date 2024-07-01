@@ -1,35 +1,51 @@
 {
-  "name": "piat-ufrn",
-  "version": "0.0.1",
-  "description": "Portal de incrições de atividades físicas da UFRN",
+  "name": "piaf-ufrn",
+  "version": "0.1.0",
+  "description": "Portal de integração de atividades físicas da UFRN",
   "main": "index.js",
   "scripts": {
-    "test": "npm run dev"
+    "dev": "cross-env NODE_ENV=development nodemon -e yaml,js,json --exec node src/index.js",
+    "start": "npx sequelize-cli db:migrate && cross-env NODE_ENV=production node src/index.js",
+    "migrate-dev": "cross-env NODE_ENV=development npx sequelize-cli db:migrate",
+    "migrate-prod": "cross-env NODE_ENV=production npx sequelize-cli db:migrate"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felipe-sbm/piaf-ufrn.git"
   },
-  "keywords": [
-    "electron",
-    "nodejs",
-    "javascript",
-    "express",
-    "html5",
-    "css3"
-  ],
-  "author": "Felipe SBM",
-  "license": "ISC",
+  "author": "Spiral",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/felipe-sbm/piaf-ufrn/issues"
   },
+  "keywords": ["electron", "nodejs", "javascript", "express", "html5", "css3"],
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "homepage": "https://github.com/felipe-sbm/piaf-ufrn#readme",
   "dependencies": {
-    "ajv": "^8.12.0",
-    "ajv-formats": "^3.0.1",
-    "electron": "^29.2.0",
-    "express": "^4.19.2",
-    "lucide-react": "^0.366.0",
-    "node": "^18.20.1"
+    "ajv": "^8.0.5",
+    "ajv-formats": "^2.0.2",
+    "aws-sdk": "^2.977.0",
+    "bcrypt": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^9.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "mysql2": "^2.2.5",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "yamljs": "^0.3.0"
   }
 }

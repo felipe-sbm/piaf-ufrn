@@ -14,6 +14,6 @@ app.get("/", (req, res) => {
 
 app.listen(8080, () => {
   console.log(
-    "Servidor pronto na porta 8080, clique aqui: http://localhost:8080"
+    "O servidor está pronto na porta 8080, clique aqui: http://localhost:8080"
   );
 });
