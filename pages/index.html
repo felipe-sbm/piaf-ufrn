@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css" />
     <link rel="stylesheet" href="/assets/css/Navbar-Right-Links-icons.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="script" href="/main.js" />
+    <link rel="script" href="/rendener.js">
   </head>
 
   <body>
@@ -154,7 +156,9 @@
           <div class="modal-body">
             <label class="form-label">Planilha exportada do google forms</label>
             <form>
+              <label class="form-label" for="fileInput">Choose File:</label>
               <input
+                id="fileInput"
                 class="border rounded border-1 border-primary shadow-sm form-control"
                 type="file"
               />
