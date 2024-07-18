@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/felipe-sbm/piaf-ufrn#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "exceljs": "^4.4.0",
+    "multer": "^1.4.5-lts.1",
     "node": "^18.20.4"
   },
   "devDependencies": {

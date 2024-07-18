@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css" />
     <link rel="stylesheet" href="/assets/css/Navbar-Right-Links-icons.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="script" href="/main.js" />
-    <link rel="script" href="/rendener.js">
+    <link rel="script" href="/preload.js" />
+    <link rel="script" href="/index.js" />
   </head>
 
   <body>
@@ -207,8 +207,20 @@
     </div>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
   </body>
-<footer class="bg-body text-center py-3">
+  <footer class="bg-body text-center py-3">
     <div class="container">
-        <span class="text-muted">Desenvolvido na Escola de Ciências & Tecnologia - 2024</span>
+      <span class="text-muted"
+        >Desenvolvido na Escola de Ciências & Tecnologia - 2024</span
+      >
     </div>
-</footer>
+  </footer>
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      window.electronAPI.handleFileUpload((event, data) => {
+        console.log(data); // Manipule a resposta aqui
+      });
+    });
+  </script>
+</html>
