@@ -12,7 +12,7 @@ function createWindow() {
 
   win.loadFile('pages/index.html');
   win.webContents.on('did-finish-load', () => {
-    win.webContents.insertCSS(path.join(__dirname, 'path/to/bootstrap.css'));
+    win.webContents.insertCSS(path.join(__dirname, 'styles.css'));
   });
 }
 
