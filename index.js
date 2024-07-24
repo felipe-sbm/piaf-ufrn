@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadFile("pages/index.html"); // Carrega o arquivo HTML
+  win.loadURL(`file://${__dirname}/pages/index.html`); // Carrega o arquivo HTML
   win.webContents.on("did-finish-load", () => {
     win.webContents.insertCSS(path.join(__dirname, "global.css")); // Insere o CSS (NÃO ESTÁ FUNCIONANDO!)
   });
