@@ -3,13 +3,10 @@ const path = require("path");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1360,
+    height: 768,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
-      nodeIntegration: false,
-      contextIsolation: true,
-      // enableRemoteModule: false, // Não é mais necessário nas versões mais recentes do Electron
+      preload: path.join(__dirname, "preload.js"), // Carrega o arquivo preload.js
     },
   });
 
@@ -21,27 +18,4 @@ function createWindow() {
 
 app.whenReady().then(() => {
   createWindow(); // Cria a janela
-});
-
-ipcMain.handle("dialog:openFile", async () => {
-  const { canceled, filePaths } = await dialog.showOpenDialog({
-    properties: ["openFile"],
-    filters: [{ name: "Planilhas", extensions: ["xlsx", "xls"] }],
-  });
-  if (canceled) {
-    return;
-  } else {
-    return filePaths[0];
-  }
-});
-
-ipcMain.handle("dialog:saveFile", async () => {
-  const { canceled, filePath } = await dialog.showSaveDialog({
-    filters: [{ name: "Planilhas", extensions: ["xlsx"] }],
-  });
-  if (canceled) {
-    return;
-  } else {
-    return filePath;
-  }
 });

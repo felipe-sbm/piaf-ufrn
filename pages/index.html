@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PIAF Backend</title>
-</head>
-<body>
+    <script>
+      document
+        .getElementById("readButton")
+        .addEventListener("click", function () {
+          var fileInput = document.getElementById("input-planilha");
+          var file = fileInput.files[0];
+          var formData = new FormData();
+          formData.append("file", file);
+
+          fetch("http://localhost:5000/upload", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+  </head>
+  <body>
     <h1>Manipulação de Planilhas</h1>
-    <label for="fileInput">Choose a file:</label>
-    <input type="file" id="fileInput" accept=".xlsx, .xls" />
-    <button type="button" id="readButton" >Ler Planilha</button>
-    <button type="button" id="writeButton">Escrever Planilha</button>
-    <script src="/render.js"></script>
-    <script src="/preload.js"></script>
-    <script src="/index.js"></script>
-    <script src="/excel.js"></script>
-</body>
+    <label for="input-planilha">Choose a file:</label>
+    <input type="file" id="input-planilha" accept=".xlsx, .xls" />
+    <button type="button" id="readButton">Ler Planilha</button>
+  </body>
 </html>
