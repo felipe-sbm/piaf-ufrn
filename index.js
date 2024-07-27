@@ -1,21 +1,50 @@
-const { app, BrowserWindow, ipcMain, dialog } = require("electron");
+const { app, BrowserWindow } = require("electron");
+const { exec } = require("child_process");
 const path = require("path");
 
+let mainWindow;
+
 function createWindow() {
-  const win = new BrowserWindow({
-    width: 1360,
-    height: 768,
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"), // Carrega o arquivo preload.js
+      nodeIntegration: true,
     },
   });
 
-  win.loadURL(`file://${__dirname}/pages/index.html`); // Carrega o arquivo HTML
-  win.webContents.on("did-finish-load", () => {
-    win.webContents.insertCSS(path.join(__dirname, "global.css")); // Insere o CSS (NÃO ESTÁ FUNCIONANDO!)
+  mainWindow.loadURL("http://localhost:5000");
+
+  mainWindow.on("closed", function () {
+    mainWindow = null;
   });
 }
 
-app.whenReady().then(() => {
-  createWindow(); // Cria a janela
+app.on("ready", () => {
+  // Inicia o servidor Flask
+  const flaskProcess = exec("python app.py", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Erro ao iniciar o servidor Flask: ${error}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  });
+
+  // Cria a janela do Electron
+  createWindow();
+
+  // Fecha o servidor Flask quando o aplicativo Electron é fechado
+  app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
+      flaskProcess.kill();
+      app.quit();
+    }
+  });
+
+  app.on("activate", () => {
+    if (mainWindow === null) {
+      createWindow();
+    }
+  });
 });

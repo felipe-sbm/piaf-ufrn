@@ -1,0 +1,9 @@
+# Instale as seguintes dependências na sua máquina,
+# para o funcionamento adequado do sistema.
+
+@Python
+
+Flask
+Flask-Cors
+pandas
+xlsxwriter

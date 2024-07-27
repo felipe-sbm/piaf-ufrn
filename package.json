@@ -1,11 +1,12 @@
 {
   "name": "piaf-ufrn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "O Portal Oficial de Integrações de Atividades Físicas da UFRN.",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "dev": "npx electron --trace-deprecation .",
+    "install-python-deps": "pip install -r requirements.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +23,8 @@
     "body-parser": "^1.20.2",
     "exceljs": "^4.4.0",
     "multer": "^1.4.5-lts.1",
-    "node": "^18.20.4"
+    "node": "^18.20.4",
+    "python-shell": "^3.0.1"
   },
   "devDependencies": {
     "@types/electron": "^1.4.38",
