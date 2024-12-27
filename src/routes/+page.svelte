@@ -1,5 +1,5 @@
 <main>
-  <h1>SvelteKit Auth Example</h1>
+  <h1 class="text-2xl">Facilidade no seu ritmo</h1>
   <p>
     This is an example site to demonstrate how to use <a
       href="https://kit.svelte.dev/">SvelteKit</a

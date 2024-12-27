@@ -1,9 +1,9 @@
 {
   "private": true,
-  "description": "An example project for Auth.js with SvelteKit",
-  "repository": "https://github.com/nextauthjs/sveltekit-auth-example",
+  "description": "Portal de Integração a Atividades Físicas da UFRN",
+  "repository": "https://github.com/felipe-sbm/piaf-ufrn",
   "bugs": {
-    "url": "https://github.com/nextauthjs/next-auth/issues"
+    "url": "https://github.com/felipe-sbm/piaf-ufrn/issues"
   },
   "homepage": "https://sveltekit-auth-example.vercel.app",
   "scripts": {

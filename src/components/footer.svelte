@@ -5,14 +5,12 @@
 
 <footer>
   <div>
-    <a href="https://sveltekit.authjs.dev">Documentation <ExternalIcon /></a>
-    <a href="https://www.npmjs.com/package/next-auth"> NPM <ExternalIcon /> </a>
-    <a
-      href="https://github.com/nextauthjs/next-auth/tree/main/apps/examples/sveltekit"
-    >
-      Source on GitHub <ExternalIcon />
+    <a href="https://sveltekit.authjs.dev">Contato <ExternalIcon /></a>
+    <a href="https://www.ufrn.br/"
+      >A UFRN <ExternalIcon />
     </a>
-    <a class="no-underline" href="/policy">Policy</a>
+    <a href="/sobre"> Sobre a PIAF </a>
+    <a class="no-underline" href="/privacidade">Politica de privacidade</a>
   </div>
   <div>
     <img src="https://authjs.dev/img/logo-sm.png" alt="Auth.js Logo" />

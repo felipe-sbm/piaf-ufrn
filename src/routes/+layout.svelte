@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from "$components/header.svelte"
   import Footer from "$components/footer.svelte"
+  import '../global.css';
 </script>
 
 <div class="container">
@@ -27,7 +28,7 @@
       "Segoe UI Symbol",
       "Noto Color Emoji";
     padding: 0 1rem 0rem 1rem;
-    max-width: 768px;
+    width: 100vw;
     margin: 0 auto;
     background: #fff;
     color: #333;
