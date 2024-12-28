@@ -1,13 +1,17 @@
 <script lang="ts">
   import { page } from "$app/stores"
   import { SignIn, SignOut } from "@auth/sveltekit/components"
+  import PIAF from "../lib/public/imgs/piaf.webp"
 </script>
 
-<header>
+<header class="mx-5">
+  <!-- Header da PIAF -->
   <nav>
+    <!-- Header do Header -->
     <ul class="navItems">
       <li class="Brasil fade-in">
         <div class="navItem">
+          <!-- Link para o website do governo -->
           <a href="https://www.gov.br/pt-br"
             ><img
               class="Brasil"
@@ -18,6 +22,7 @@
         </div>
       </li>
       <ol class="rightItems fade-in">
+        <!-- Seleção de menus -->
         <li class="navItem"><a href="/">Início</a></li>
         <li class="navItem"><a href="/inscricoes">Inscrições</a></li>
         <li class="navItem"><a href="/perfil">Perfil</a></li>
@@ -25,40 +30,41 @@
     </ul>
   </nav>
   <div class="signedInStatus">
+    <!-- Botão de Login -->
     <div class="nojs-show loaded">
-      <div class="userProfile">
-        <img
-          alt="User avatar"
-          src={$page.data?.session?.user?.image ??
-            `https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(Math.random() * 100000) + 1}&randomizeIds=true`}
-          class="avatar"
-        />
+      <!-- Logo da PIAF -->
+      <div class="logo">
+        <img src={PIAF} alt="Logo da PIAF" class="w-32" />
       </div>
-      <div class="logoPIAF">
-        <img src="/imgs/piaf.webp" alt="Logo da PIAF" />
-      </div>
+      <!-- Verificador de Login -->
       {#if $page.data.session}
-        <div class="singedIn flex">
-          <span class="signedInText">
-            {$page.data.session.user?.email ?? $page.data.session.user?.name}
-          </span>
-          <SignOut>
-            <span class="notSignedInText">Você está no sistema 😊</span>
-            <div slot="submitButton" class="buttonPrimary">Sair</div>
-          </SignOut>
+        <div class="userProfile">
+          <!-- Imagem do Usuário -->
+          <img
+            alt="User avatar"
+            src={$page.data?.session?.user?.image ??
+              `https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(Math.random() * 100000) + 1}&randomizeIds=true`}
+            class="avatar"
+          />
+          <span class="notSignedInText">Olá, 😊</span>
         </div>
+        <span class="signedInText">
+          {$page.data.session.user?.email ?? $page.data.session.user?.name}
+        </span>
+        <SignOut>
+          <div slot="submitButton" class="buttonPrimary">Sair</div>
+        </SignOut>
       {:else}
-        <div class="notSingedIn flex">
-          <span class="notSignedInText">Você não está no sistema 🧐</span>
-          <SignIn>
-            <div slot="submitButton" class="buttonPrimary">Entrar</div>
-          </SignIn>
-        </div>
+        <span class="notSignedInText">Você não está no sistema 🧐</span>
+        <SignIn>
+          <div slot="submitButton" class="buttonPrimary">Entrar</div>
+        </SignIn>
       {/if}
     </div>
   </div>
 </header>
 
+<!-- Estilos do Header -->
 <style>
   .nojs-show {
     opacity: 1;
@@ -117,6 +123,7 @@
     background-color: #992613;
     color: #fff;
     text-decoration: none;
+    margin-left: 1rem;
     padding: 0.7rem 1.4rem;
   }
   .buttonPrimary:hover {
@@ -133,6 +140,7 @@
   .rightItems {
     display: flex;
     margin-left: auto;
+    margin-right: 5.5rem;
   }
   .Brasil {
     display: inline-flex;

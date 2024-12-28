@@ -18,7 +18,6 @@
       -apple-system,
       BlinkMacSystemFont,
       "Segoe UI",
-      Roboto,
       "Helvetica Neue",
       Arial,
       "Noto Sans",

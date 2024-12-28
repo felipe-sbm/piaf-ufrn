@@ -7,6 +7,6 @@
     <input type="hidden" name="callbackUrl" value={provider.callbackUrl} />
   {/if}
   <button type="submit" class="button">
-    <slot>Sign in with {provider.name}</slot>
+    <slot>Entrar com {provider.name}</slot>
   </button>
 </form>

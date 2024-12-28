@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Portal de Integração a Atividades Físicas da UFRN</title>
+</svelte:head>
+
 <main>
   <h1 class="text-2xl">Facilidade no seu ritmo</h1>
   <p>
