@@ -1,6 +1,6 @@
 {
   "private": true,
-  "description": "Portal de Integração a Atividades Físicas da UFRN",
+  "description": "Portal de Inscrições de Atividades Físicas da UFRN",
   "repository": "https://github.com/felipe-sbm/piaf-ufrn",
   "bugs": {
     "url": "https://github.com/felipe-sbm/piaf-ufrn/issues"
@@ -26,7 +26,8 @@
     "vite": "5.2.14"
   },
   "dependencies": {
-    "@auth/sveltekit": "latest"
+    "@auth/sveltekit": "latest",
+    "lucide-svelte": "^0.469.0"
   },
   "type": "module"
 }

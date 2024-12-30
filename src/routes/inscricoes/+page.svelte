@@ -1,10 +1,11 @@
+<script lang="ts">
+  import { page } from "$app/stores"
+  import "../global.css"
+</script>
+
 <svelte:head>
   <title>Inscrições da PIAF</title>
 </svelte:head>
-
-<script lang="ts">
-  import { page } from "$app/stores"
-</script>
 
 <div>
   <h1 class="text-2xl">Inscrições em andamento</h1>

@@ -2,9 +2,10 @@
   import { page } from "$app/stores"
   import { SignIn, SignOut } from "@auth/sveltekit/components"
   import PIAF from "../lib/public/imgs/piaf.webp"
+  import "../global.css";
 </script>
 
-<header class="mx-5">
+<header class="mx-5 poppins-regular">
   <!-- Header da PIAF -->
   <nav>
     <!-- Header do Header -->
@@ -12,7 +13,10 @@
       <li class="Brasil fade-in">
         <div class="navItem">
           <!-- Link para o website do governo -->
-          <a href="https://www.gov.br/pt-br"
+          <a
+            href="https://www.gov.br/pt-br"
+            target="_blank"
+            rel="noopener noreferrer"
             ><img
               class="Brasil"
               src="https://flagsapi.com/BR/shiny/24.png"
@@ -25,6 +29,10 @@
         <!-- Seleção de menus -->
         <li class="navItem"><a href="/">Início</a></li>
         <li class="navItem"><a href="/inscricoes">Inscrições</a></li>
+        <li class="navItem"><a href="/resultados">Resultados</a></li>
+        <li class="navItem">
+          <a href="/professores">Conheça os professores</a>
+        </li>
         <li class="navItem"><a href="/perfil">Perfil</a></li>
       </ol>
     </ul>
@@ -32,10 +40,10 @@
   <div class="signedInStatus">
     <!-- Botão de Login -->
     <div class="nojs-show loaded">
-      <!-- Logo da PIAF -->
-      <div class="logo">
+      <!-- Logo da PIAF com opção de retorno a tela inicial -->
+      <a href="/" class="logo">
         <img src={PIAF} alt="Logo da PIAF" class="w-32" />
-      </div>
+      </a>
       <!-- Verificador de Login -->
       {#if $page.data.session}
         <div class="userProfile">
@@ -46,7 +54,9 @@
               `https://api.dicebear.com/9.x/thumbs/svg?seed=${Math.floor(Math.random() * 100000) + 1}&randomizeIds=true`}
             class="avatar"
           />
-          <span class="notSignedInText">Olá, 😊</span>
+          <span class="notSignedInText"
+            >Olá, {$page.data?.session?.user} 😊</span
+          >
         </div>
         <span class="signedInText">
           {$page.data.session.user?.email ?? $page.data.session.user?.name}
@@ -55,9 +65,11 @@
           <div slot="submitButton" class="buttonPrimary">Sair</div>
         </SignOut>
       {:else}
-        <span class="notSignedInText">Você não está no sistema 🧐</span>
+        <span class="notSignedInText">Você não está no sistema ℹ️</span>
         <SignIn>
-          <div slot="submitButton" class="buttonPrimary">Entrar</div>
+          <div slot="submitButton" class="buttonPrimary poppins-thin">
+            Entrar
+          </div>
         </SignIn>
       {/if}
     </div>
@@ -85,7 +97,7 @@
     border-radius: 0 0 1rem 1rem;
     padding: 0.6rem 1rem;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #f2f2f2;
     transition: all 0.2s ease-in;
   }
   .signedInText,
@@ -113,7 +125,7 @@
     background-repeat: no-repeat;
   }
   .buttonPrimary {
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 0.7rem;
     cursor: pointer;
     font-size: 1rem;
@@ -157,7 +169,15 @@
   :global(form button) {
     border: none !important;
   }
-
+  .logo {
+    display: inline-block;
+    margin-left: -0.2rem;
+  }
+  li a {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s forwards;

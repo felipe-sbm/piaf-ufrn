@@ -1,40 +1,49 @@
 <script lang="ts">
-  import packageJSON from "@auth/sveltekit/package.json"
-  import ExternalIcon from "./external-icon.svelte"
+  import Otsuki from "../lib/public/imgs/otsuki-dark.webp"
+  import { Link } from "lucide-svelte"
+  import "../global.css"
 </script>
 
 <footer>
   <div>
-    <a href="https://sveltekit.authjs.dev">Contato <ExternalIcon /></a>
-    <a href="https://www.ufrn.br/">A UFRN <ExternalIcon /> </a>
+    <a href="https://" target="_blank" rel="noopener noreferrer"
+      >Contato <Link class="w-4" /></a
+    >
+    <a href="https://www.ufrn.br/" target="_blank" rel="noopener noreferrer"
+      >A UFRN <Link class="w-4" />
+    </a>
     <a href="/sobre"> Sobre a PIAF </a>
     <a class="no-underline" href="/privacidade">Politica de privacidade</a>
   </div>
   <div>
-    <img src="https://authjs.dev/img/logo-sm.png" alt="Auth.js Logo" />
-    <a href="https://www.npmjs.com/package/@auth/sveltekit">
-      @auth/sveltekit@{packageJSON.version}
-      <ExternalIcon />
+    <a
+      href="https://github.com/otsuki-dev"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={Otsuki} alt="Logo da Otsuki Development" class="otsuki" />
+      <p class="ml-1">Otsuki Development</p>
+      <Link class="w-4" />
     </a>
   </div>
-  <div class="copyright mx-5">
     <p class="mx-10">
-      © 2024 PIAF - Portal de Integração a Atividades Físicas da UFRN
+      © MIT 2025 PIAF - Portal de Inscrições de Atividades Físicas da UFRN
     </p>
-  </div>
 </footer>
 
 <style>
   footer {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: calc(100vw - 4rem);
     justify-content: space-between;
     align-items: center;
     padding-inline: 1.25rem;
-    margin-block: 2rem;
     background-color: #f2f2f2;
-    padding: 3rem 0 2rem 0;
+    padding: 2rem 0 0 0;
     border-radius: 1rem 1rem 0 0;
+    margin: 0 1rem 0 1rem;
+    box-sizing: border-box;
   }
   footer > div {
     gap: 1rem;
@@ -42,6 +51,8 @@
     flex-wrap: wrap;
     align-items: center;
     margin: 2rem;
+    max-width: 100%;
+    overflow: hidden;
   }
   footer a {
     color: #333;
@@ -55,17 +66,11 @@
     width: 24px;
     height: 24px;
   }
-  .copyright {
-    font-size: 0.75rem;
-    color: cornsilk;
-    margin-top: 1rem;
-    background-color: #992613;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .no-underline {
-    text-decoration: none;
+  .otsuki {
+    width: 4rem;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 </style>

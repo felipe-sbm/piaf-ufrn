@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores"
+  import "../global.css"
 </script>
 
 {#if $page.data.session}
