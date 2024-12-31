@@ -1,7 +1,10 @@
 <script lang="ts">
   import { page } from "$app/stores"
-  import "../global.css"
 </script>
+
+<svelte:head>
+  <title>Perfil do Usuário | PIAF</title>
+</svelte:head>
 
 {#if $page.data.session}
   <h1>Protected page</h1>

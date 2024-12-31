@@ -1,10 +1,9 @@
 <script lang="ts">
   import Run from "$lib/public/imgs/pexels-ketut-subiyanto-4719931.webp"
-  import "../global.css"
 </script>
 
 <svelte:head>
-  <title>Portal de Inscrições de Atividades Físicas da UFRN</title>
+  <title>Portal de Inscrições de Atividades Físicas da UFRN | PIAF</title>
 </svelte:head>
 
 <main class="mx-12">
