@@ -6,14 +6,14 @@
   <title>Portal de Inscrições de Atividades Físicas da UFRN | PIAF</title>
 </svelte:head>
 
-<main class="mx-12">
-  <div class="mx-12 poppins-regular flex flex-row items-start">
-    <div class="border-4 w-96">
-      <img src={Run} alt="Homem correndo, imagem Stock" />
+<main class="mx-12 sm:my-8">
+  <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+    <div class="border-4 border-gray-300 rounded-lg overflow-hidden shadow-lg w-full md:w-96">
+      <img src={Run} alt="Homem correndo, imagem Stock" class="w-full h-auto" />
     </div>
-    <div class="ml-8">
-      <h1 class="text-2xl">Facilidade no seu ritmo</h1>
-      <p>
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl font-extrabold mb-4 text-gray-800">Facilidade no seu ritmo</h1>
+      <p class="text-lg text-gray-600">
         A PIAF foi planejada cuidadosamente para fornecer a usuários de qualquer
         idade a possibilidade de se inscrever em atividades físicas de forma
         simples e rápida. Com vários professores, o setor de Educação Física da
@@ -22,12 +22,12 @@
       </p>
     </div>
   </div>
-  <div class="w-full mt-8"></div>
-  <h2 class="text-3xl mb-4">Nossas responsabilidades</h2>
-  <div class="flex flex-row justify-between">
-    <div class="w-1/3 p-4 border-2">
-      <h3 class="text-xl mb-2">Realização dos processos seletivos</h3>
-      <p>
+  <div class="w-full mt-12"></div>
+  <h2 class="text-3xl font-bold mb-8">Nossas responsabilidades</h2>
+  <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+    <div class="w-full md:w-1/3 p-6 border-2 rounded-lg shadow-lg">
+      <h3 class="text-xl font-semibold mb-4">Realização dos processos seletivos</h3>
+      <p class="text-lg">
         Todos os processos seletivos de esportes e atividades físicas são
         realizados pela plataforma da <i>PIAF</i>, não sendo necessário sair e
         retornar diversas vezes. Vale ressaltar que os processos seletivos não
@@ -35,18 +35,18 @@
         computadores confiáveis.
       </p>
     </div>
-    <div class="w-1/3 p-4 border-2">
-      <h3 class="text-xl mb-2">Vasta gama de modalidades</h3>
-      <p>
+    <div class="w-full md:w-1/3 p-6 border-2 rounded-lg shadow-lg">
+      <h3 class="text-xl font-semibold mb-4">Vasta gama de modalidades</h3>
+      <p class="text-lg">
         No setor de Educação Física é disponibilizado diversas atividades que
         podem ser realizada a inscrição através do nosso sistema, sendo muito
         mais fácil do que o modelo anterior. As atividades são de diversos
         tipos, como modalidades aquáticas, aeróbicas e anaeróbicas etc.
       </p>
     </div>
-    <div class="w-1/3 p-4 border-2">
-      <h3 class="text-xl mb-2">Privacidade e segurança</h3>
-      <p>
+    <div class="w-full md:w-1/3 p-6 border-2 rounded-lg shadow-lg">
+      <h3 class="text-xl font-semibold mb-4">Privacidade e segurança</h3>
+      <p class="text-lg">
         Os seus dados estão criptografados, não permitindo com que ocorra o
         vazamento de seu CPF ou e-mail, somente o seu nome será publico, os
         demais estão seguros. Não é necessário nenhum custo para se inscrever,
@@ -57,7 +57,4 @@
 </main>
 
 <style>
-  main {
-    flex: 1;
-  }
 </style>

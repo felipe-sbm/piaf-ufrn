@@ -5,72 +5,81 @@
 </script>
 
 <footer>
-  <div>
-    <a href="https://" target="_blank" rel="noopener noreferrer"
-      >Contato <Link class="w-4" /></a
-    >
-    <a href="https://www.ufrn.br/" target="_blank" rel="noopener noreferrer"
-      >A UFRN <Link class="w-4" />
+  <div class="links">
+    <a href="https://" target="_blank" rel="noopener noreferrer">
+      Contato <Link class="w-4" />
     </a>
-    <a href="/sobre"> Sobre a PIAF </a>
-    <a class="no-underline" href="/privacidade">Politica de privacidade</a>
+    <a href="https://www.ufrn.br/" target="_blank" rel="noopener noreferrer">
+      A UFRN <Link class="w-4" />
+    </a>
+    <a href="/sobre">Sobre a PIAF</a>
+    <a class="no-underline" href="/privacidade">Política de privacidade</a>
   </div>
-  <div>
-    <a
-      href="https://github.com/otsuki-dev"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+  <div class="branding">
+    <a href="https://github.com/otsuki-dev" target="_blank" rel="noopener noreferrer">
       <img src={Otsuki} alt="Logo da Otsuki Development" class="otsuki" />
       <p class="ml-1">Otsuki Development</p>
       <Link class="w-4" />
     </a>
   </div>
-    <p class="mx-10">
-      © MIT 2025 PIAF - Portal de Inscrições de Atividades Físicas da UFRN
-    </p>
+  <p class="copyright">
+    © MIT 2025 PIAF - Portal de Inscrições de Atividades Físicas da UFRN
+  </p>
 </footer>
 
 <style>
   footer {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 4rem);
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    padding-inline: 1.25rem;
+    padding: 2rem 1rem;
     background-color: #f2f2f2;
-    padding: 2rem 0 0 0;
     border-radius: 1rem 1rem 0 0;
-    margin: 0 1rem 0 1rem;
     box-sizing: border-box;
   }
-  footer > div {
-    gap: 1rem;
+  .links, .branding {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    margin: 2rem;
-    max-width: 100%;
-    overflow: hidden;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
-  footer a {
+  .links a {
     color: #333;
     text-underline-offset: 4px;
     font-weight: 500;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 0.25rem;
   }
-  footer img {
-    width: 24px;
-    height: 24px;
+  .branding a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #333;
   }
   .otsuki {
     width: 4rem;
     height: auto;
     object-fit: contain;
-    display: block;
-    margin: 0 auto;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  @media (min-width: 768px) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem 4rem;
+    }
+    .links, .branding {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
   }
 </style>

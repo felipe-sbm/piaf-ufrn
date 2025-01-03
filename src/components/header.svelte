@@ -187,4 +187,37 @@
       opacity: 1;
     }
   }
+
+
+  @media (max-width: 768px) {
+    .navItems {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .rightItems {
+      flex-direction: column;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .navItem {
+      margin-right: 0;
+      border-right: none;
+      padding-right: 0;
+      margin-bottom: 0.5rem;
+    }
+    .Brasil {
+      margin-right: 0;
+    }
+    .signedInStatus {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .signedInText,
+    .notSignedInText {
+      padding-left: 0;
+    }
+    .logo {
+      margin-bottom: 1rem;
+    }
+  }
 </style>
