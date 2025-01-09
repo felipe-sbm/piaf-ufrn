@@ -5,9 +5,9 @@
   import "../global.css";
 </script>
 
-<header class="mx-5 poppins-regular">
+<header class="poppins-regular">
   <!-- Header da PIAF -->
-  <nav>
+  <nav class="">
     <!-- Header do Header -->
     <ul class="navItems">
       <li class="Brasil fade-in">
@@ -94,7 +94,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    border-radius: 0 0 1rem 1rem;
     padding: 0.6rem 1rem;
     margin: 0;
     background-color: #f2f2f2;

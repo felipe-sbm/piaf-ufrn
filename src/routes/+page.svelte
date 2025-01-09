@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Undraw from "$lib/public/imgs/undraw_fitness-tracker.svg"
   import Run from "$lib/public/imgs/pexels-ketut-subiyanto-4719931.webp"
 </script>
 
@@ -6,8 +7,11 @@
   <title>Portal de Inscrições de Atividades Físicas da UFRN | PIAF</title>
 </svelte:head>
 
-<main class="mx-12 sm:my-8">
-  <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+<main class="">
+  <div class="introduction">
+    <img src={Undraw} alt="Desenho do tipo Undraw">
+  </div>
+  <div class="mx-12 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
     <div class="border-4 border-gray-300 rounded-lg overflow-hidden shadow-lg w-full md:w-96">
       <img src={Run} alt="Homem correndo, imagem Stock" class="w-full h-auto" />
     </div>
@@ -57,4 +61,15 @@
 </main>
 
 <style>
+  .introduction {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(135deg, #992613, #b33a2e, #cc5047, #e66661, #ff7c7a);
+  }
+  @media (min-width: 640px) {
+    .introduction {
+      height: 40%;
+    }
+  }
 </style>
