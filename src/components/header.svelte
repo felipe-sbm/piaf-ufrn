@@ -1,16 +1,16 @@
 <script lang="ts">
   import { page } from "$app/stores"
   import { SignIn, SignOut } from "@auth/sveltekit/components"
-  import PIAF from "../lib/public/imgs/piaf.webp"
-  import "../global.css";
+  import PIAF from "$lib/public/imgs/piaf.webp"
+  import "../global.css"
 </script>
 
 <header class="poppins-regular">
   <!-- Header da PIAF -->
-  <nav class="">
-    <!-- Header do Header -->
+  <nav>
+    <!-- Navegador do Header -->
     <ul class="navItems">
-      <li class="Brasil fade-in">
+      <li class="Brasil fade-in ml-12">
         <div class="navItem">
           <!-- Link para o website do governo -->
           <a
@@ -42,7 +42,7 @@
     <div class="nojs-show loaded">
       <!-- Logo da PIAF com opção de retorno a tela inicial -->
       <a href="/" class="logo">
-        <img src={PIAF} alt="Logo da PIAF" class="w-32" />
+        <img src={PIAF} alt="Logo da PIAF" class="w-32 ml-12" />
       </a>
       <!-- Verificador de Login -->
       {#if $page.data.session}
@@ -55,7 +55,7 @@
             class="avatar"
           />
           <span class="notSignedInText"
-            >Olá, {$page.data?.session?.user} 😊</span
+            >Olá, {$page.data?.session?.user?.name ?? "Usuário"} 😊</span
           >
         </div>
         <span class="signedInText">
@@ -65,9 +65,9 @@
           <div slot="submitButton" class="buttonPrimary">Sair</div>
         </SignOut>
       {:else}
-        <span class="notSignedInText">Você não está no sistema ℹ️</span>
+        <span class="notSignedInText">Você não está no sistema</span>
         <SignIn>
-          <div slot="submitButton" class="buttonPrimary poppins-thin">
+          <div slot="submitButton" class="buttonPrimary poppins-thin mr-12">
             Entrar
           </div>
         </SignIn>
@@ -96,8 +96,9 @@
     align-items: center;
     padding: 0.6rem 1rem;
     margin: 0;
-    background-color: #f2f2f2;
+    background-color: #f5f5f4;
     transition: all 0.2s ease-in;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
   .signedInText,
   .notSignedInText {
@@ -125,7 +126,6 @@
   }
   .buttonPrimary {
     font-weight: 600;
-    border-radius: 0.7rem;
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.4rem;
@@ -143,15 +143,15 @@
   .navItems {
     padding: 0;
     list-style: none;
-    background-color: #dbdbdb;
-    padding: 0 0.5rem 0 1.5rem;
+    background-color: #e7e5e4;
+    padding: 0 0.5rem 0 0.9rem;
     display: flex;
     justify-content: space-between;
   }
   .rightItems {
     display: flex;
     margin-left: auto;
-    margin-right: 5.5rem;
+    margin-right: 2.5rem;
   }
   .Brasil {
     display: inline-flex;
@@ -186,7 +186,6 @@
       opacity: 1;
     }
   }
-
 
   @media (max-width: 768px) {
     .navItems {
