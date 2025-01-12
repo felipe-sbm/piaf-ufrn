@@ -11,7 +11,7 @@
   <title>Portal de Inscrições de Atividades Físicas da UFRN | PIAF</title>
 </svelte:head>
 
-<main class="">
+<main class="antialasing">
   <!-- TOPO DA PÁGINA -->
   <div class="introduction">
     <div class="xl:mx-12 lg:mx-10 md:mx-8 ml:mx-4 xm:mx-2">
@@ -25,19 +25,23 @@
         atividades físicas de forma simples e rápida, sem precisar sair de casa.
       </p>
     </div>
-    <img class="ml-2" src={Undraw} alt="Desenho do tipo Undraw" />
+    <img
+      class="ml-2 py-16 introduction-img"
+      src={Undraw}
+      alt="Desenho do tipo Undraw"
+    />
   </div>
 
   <!-- INTRODUÇÃO A INSCRIÇÃO -->
   <div
-    class="mt-12 mb-8 mx-52 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8"
+    class="mt-24 mb-24 mx-4 md:mx-8 lg:mx-16 xl:mx-24 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8"
   >
     <img src={Run} alt="Homem correndo, imagem Stock" class="homeImages" />
     <div class="text-center md:text-left">
-      <h1 class="text-4xl font-extrabold mb-4 text-gray-800">
+      <h1 class="text-4xl font-extrabold mb-4 text-slate-800">
         Crie sua conta e comece hoje mesmo!
       </h1>
-      <p class="text-lg text-gray-600">
+      <p class="text-lg text-slate-600">
         A PIAF foi planejada cuidadosamente para fornecer aos usuários de
         qualquer idade a possibilidade de se inscrever em atividades físicas de
         forma simples e rápida. Crie sua conta agora mesmo e aguarde um processo
@@ -49,7 +53,7 @@
             Criar conta
           </div>
         </SignIn>
-        <p class="text-sm text-gray-600 ml-2">
+        <p class="text-sm text-slate-600 ml-2">
           ℹ️ Não pedimos nenhuma informação fora da PIAF!
         </p>
       </div>
@@ -58,7 +62,7 @@
 
   <!-- RESPONSABILIDADES -->
   <div class="responsabilities">
-    <div class="mx-12 pt-8 pb-12">
+    <div class="mx-4 md:mx-8 lg:mx-12 pt-8 pb-12">
       <h2 class="text-3xl text-center font-bold mb-4">
         Nossas responsabilidades
       </h2>
@@ -115,28 +119,56 @@
     </div>
   </div>
 
-  <img
-    src={Computer}
-    alt="Mulher sentada na cama utilizando o notebook, imagem Stock"
-    class="homeImages"
-  />
+  <!-- INFORMAÇÕES ADICIONAIS -->
+  <div
+    class="mt-24 mb-24 mx-4 md:mx-8 lg:mx-16 xl:mx-24 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8"
+  >
+    <div class="text-center md:text-right">
+      <h1 class="text-4xl font-extrabold mb-4 text-slate-800">
+        Não fique de fora das últimas notícias
+      </h1>
+      <p class="text-lg text-right text-slate-600">
+        Nós temos um canal de notícias no Instagram, onde postamos informações
+        importantes para você, avisando sobre atualizações. Está esperando o
+        que?
+      </p>
+      <div class="flex mt-4 items-end justify-end">
+        <a
+          href="https://www.instagram.com/piaf_ufrn"
+          class="buttonPrimary poppins-thin"
+        >
+          Siga o nosso Instagram
+        </a>
+      </div>
+    </div>
+    <img
+      src={Computer}
+      alt="Mulher sentada na cama utilizando o notebook, imagem Stock"
+      class="homeImages"
+    />
+  </div>
 
   <!-- PROCESSOS SELETIVOS ANTERIORES -->
   <div class="responsabilities">
-    <div class="mx-12 pt-8 pb-12">
+    <div class="mx-4 md:mx-8 lg:mx-12 pt-8 pb-12">
       <h2 class="text-3xl text-center font-bold mb-2">Últimos Resultados</h2>
-      <p class="text-md text-gray-700 mb-4 text-center">Aqui vão alguns dos nossos últimos processos seletivos. Todos realizados dentro da nossa plataforma</p>
+      <p class="text-md text-slate-700 mb-4 text-center">
+        Aqui vão alguns dos nossos últimos processos seletivos. Todos realizados
+        dentro da nossa plataforma
+      </p>
       <!-- LOADING FALSO, IMPLEMENTAÇÃO DO BANCO DE DADOS NECESSÁRIA -->
       <div
         class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8"
       >
-        <Loading className="w-96"/>
-        <Loading className="w-96"/>
-        <Loading className="w-96"/>
-        <Loading className="w-96"/>
-        <Loading className="w-96"/>
+        <Loading className="w-full md:w-1/5" />
+        <Loading className="w-full md:w-1/5" />
+        <Loading className="w-full md:w-1/5" />
+        <Loading className="w-full md:w-1/5" />
+        <Loading className="w-full md:w-1/5" />
       </div>
-      <p class="text-md text-gray-700 mt-8 text-center">Quer ver algum outro? Procure por aqui!</p>
+      <p class="text-md text-slate-700 mt-8 text-center">
+        Quer ver algum outro? Procure por aqui!
+      </p>
       <div class="flex justify-center mt-4">
         <a class="buttonPrimary poppins-thin" href="/resultados">
           Resultados anteriores
@@ -156,7 +188,7 @@
     justify-content: center;
     align-items: center;
   }
-  .introduction img {
+  .introduction-img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -164,7 +196,8 @@
     margin-right: 7rem;
   }
   .homeImages {
-    width: 30rem;
+    width: 100%;
+    max-width: 30rem;
     height: auto;
     border: 3px solid #bf776c;
   }
@@ -187,7 +220,7 @@
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 640px) {
-    .introduction img {
+    .introduction-img {
       margin-right: 0;
     }
   }

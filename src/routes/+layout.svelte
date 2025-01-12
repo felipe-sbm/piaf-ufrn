@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { page } from "$app/stores"
   import Header from "$components/header.svelte"
   import Footer from "$components/footer.svelte"
   import "../global.css"
