@@ -37,7 +37,7 @@
     com seus dados.
   </p>
   {#if $page.data.session}
-    <p>Session expiry: {$page.data.session?.expires}</p>
+    <p>Sua sessão expira em: {$page.data.session?.expires}</p>
   {:else}
     <h1>Nenhuma inscrição em andamento 😞</h1>
   {/if}

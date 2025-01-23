@@ -12,7 +12,7 @@
      Não é possível ter acesso a essa página sem ser um administrador.
     </p>
     {#if $page.data.session}
-      <p>Session expiry: {$page.data.session?.expires}</p>
+      <p>Sessão do Administrador expira em: {$page.data.session?.expires}</p>
     {:else}
       <h1>Faça o login com uma conta de administrador!</h1>
     {/if}
