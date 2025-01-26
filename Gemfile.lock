@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activerecord (6.1.4)
+      activemodel (= 6.1.4)
+      activesupport (= 6.1.4)
+      arel (9.0.0)
+    activesupport (6.1.4)
+    sinatra (2.1.0)
+      rack (2.2.3)
+    rack (2.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  sinatra
+
+BUNDLED WITH
+   2.2.22
